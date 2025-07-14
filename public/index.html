@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT 332 - Sample</title>
+    <!-- Cloud Firestore and Firebase Auth (compat version) -->
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>  <!-- Firebase core (required) -->
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore-compat.js"></script> <!-- Cloud Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>  <!-- Authentication -->
+    <!-- script Tag to reference the js file -->
+    <script src="app.js" defer></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Firebase Demo - IT 332</h1>
+        <h4>Integrative Programming and Technologies</h4>
+        <section id="whenSignedOut">
+            <button id="btnSignIn">Sign in with Google</button>
+        </section>
+        <section id="whenSignedIn" hidden>
+            <div id="user-details">
+            </div>
+            <button id="btnSignOut">Sign Out</button>
+        </section>
+
+        <!-- table to display Firestore data document id, name, birth year -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Document ID</th>
+                    <th>Bloom</th>
+                    <th>First Name</th>
+                    <th>Song</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"> 
+                <!-- table rows from firestore data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
